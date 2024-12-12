@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Correct way to append using insertAdjacentHTML to avoid unexpected behavior
+    document.getElementById('myDiv').insertAdjacentHTML('beforeend', '<p>Paragraph 1</p>');
+    document.getElementById('myDiv').insertAdjacentHTML('beforeend', '<p>Paragraph 2</p>');
+    document.getElementById('myDiv').insertAdjacentHTML('beforeend', '<p>Paragraph 3</p>');
+  </script>
+</body>
+</html>
