@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrectly using innerHTML to append elements; leads to unexpected behavior
+    document.getElementById('myDiv').innerHTML += '<p>Paragraph 1</p>';
+    document.getElementById('myDiv').innerHTML += '<p>Paragraph 2</p>';
+    //Instead use insertAdjacentHTML
+    //document.getElementById('myDiv').insertAdjacentHTML('beforeend','<p>Paragraph 3</p>');
+  </script>
+</body>
+</html>
